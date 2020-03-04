@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SimpleFactory
 {
-    public class ShopSale
+    public class ShopSale : ISale
     {
         public int amount { get; set; }
         public IProduct product { get; set; }
