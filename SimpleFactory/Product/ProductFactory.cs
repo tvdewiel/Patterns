@@ -10,9 +10,9 @@ namespace SimpleFactory
         {
             switch (type)
             {
-                case "Laptop": return new Laptop();
-                case "Desktop": return new Desktop();
-                case "Printer": return new Printer();
+                case "Laptop": return new Laptop("Acer",750);
+                case "Desktop": return new Desktop("IBM",900);
+                case "Printer": return new Printer("HP",80);
                 default: return null;
             }
         }

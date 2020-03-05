@@ -6,12 +6,19 @@ namespace SimpleFactory
 {
     public class SalesFactory
     {
-        public ISale createSale(string type)
+        private ProductFactory pFac;
+
+        public SalesFactory(ProductFactory pFac)
+        {
+            this.pFac = pFac;
+        }
+
+        public ISale createSale(string type, int amount, string product, double price, int salesID)
         {
             switch (type)
             {
-                case "online": return new OnlineSale();
-                case "shop": return new ShopSale();
+                case "online": return new OnlineSale(amount,pFac.createProduct(product),price,salesID);
+                case "shop": return new ShopSale(amount, pFac.createProduct(product), price, salesID);
                 default: return null;
             }
         }

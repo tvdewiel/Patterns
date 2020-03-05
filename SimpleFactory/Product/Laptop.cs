@@ -6,6 +6,12 @@ namespace SimpleFactory
 {
     public class Laptop : IProduct
     {
+        public Laptop(string productName, double productionCost)
+        {
+            this.productName = productName;
+            this.productionCost = productionCost;
+        }
+
         public string productName { get; set; }
         public double productionCost { get; set; }
         public override string ToString()

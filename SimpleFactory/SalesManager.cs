@@ -17,13 +17,20 @@ namespace SimpleFactory
         {
             storage.storeSale(sale);
         }
-        public void getTotalProfit()
+        public double getTotalProfit()
         {
-            storage.allSales().Sum(x => (x.price - x.product.productionCost) * x.amount);
+            return storage.allSales().Sum(x => (x.price - x.product.productionCost) * x.amount);
         }
         public IList<ISale> getSales()
         {
             return storage.allSales();
+        }
+        public void processSales()
+        {
+            foreach(ISale s in storage.allSales())
+            {
+                s.processSale();
+            }
         }
     }
 }
