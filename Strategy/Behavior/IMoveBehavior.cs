@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Strategy
+namespace Strategy.Behavior
 {
-    interface IMoveBehavior
+    public interface IMoveBehavior
     {
+        void Move();
     }
 }

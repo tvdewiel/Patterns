@@ -5,15 +5,15 @@ using System.Text;
 
 namespace Strategy.Animals
 {
-    public class Lion : Animal
+    public class Tiger : Animal
     {
-        public Lion(string name, IMoveBehavior moveBehavior, IEatBehaviour eatBehavior) : base(name, moveBehavior, eatBehavior)
+        public Tiger(string name, IMoveBehavior moveBehavior, IEatBehaviour eatBehavior) : base(name, moveBehavior, eatBehavior)
         {
         }
 
         public override void Display()
         {
-            Console.WriteLine($"Me lion {name}");
+            Console.WriteLine($"Me tiger {name}");
         }
     }
 }
